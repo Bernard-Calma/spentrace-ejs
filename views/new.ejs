@@ -1,0 +1,22 @@
+<%- include("./partials/header.ejs") %>
+<%- include("./partials/navigation.ejs") %>
+<form action="/plan" method="POST">
+    <label>
+        Date: 
+        <input type="date" name="date" id="date"/>
+    </label>
+    <label>
+        Amount:
+        <input type="number" name="amount" id="amount">
+    </label>
+    <label>
+        Name: 
+        <input type="text" name="name" id="name">
+    </label>
+    <label for="notes">Notes:</label>
+    <textarea name="notes">
+        
+    </textarea>
+</form>
+
+<%- include("./partials/footer.ejs") %>
