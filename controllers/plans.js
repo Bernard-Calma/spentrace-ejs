@@ -28,4 +28,13 @@ router.get("/new", (req,res) => {
     res.render("new.ejs")
 })
 
+router.route("/:id")
+.get((req,res) => {
+    Plan.findById(req.params.id,(err,planFound) => {
+        res.render("show.ejs", {
+            plan: planFound
+        })
+    })
+})
+
 module.exports = router
