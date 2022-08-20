@@ -9,7 +9,9 @@ const Plan = require("../models/plans.js")
 router.route("/")
 //Index
 .get((req,res) => {
-    res.render("index.ejs")
+    Plan.find({},(err,plans) => {
+        res.render("index.ejs", {plans})
+    })
 })
 .post((req,res) => {
     Plan.create(req.body, (err,plan) => {
