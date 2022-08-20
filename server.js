@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 const mongoURI = process.env.MONGOURI
 
 // Import Database here
+const Plan = require("./models/plans.js")
 const mongoose = require("mongoose")
 const db = mongoose.connection
 mongoose.connect(mongoURI)
