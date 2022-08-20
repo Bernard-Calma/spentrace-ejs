@@ -19,10 +19,10 @@ db.error("error", (err) => {
     console.log(`MongoDB connected ${mongoURI}`)
 })
 
-
-
 //MiddleWare
 app.use(express.static("public"))
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 //Controllers
 app.use("/plan",planController)
