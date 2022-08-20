@@ -1,7 +1,24 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
 const planController = require("./controllers/plans.js")
+
+//Environment Variables
+require("dotenv").config()
+const PORT = process.env.PORT;
+const mongoURI = process.env.MONGOURI
+
+// Import Database here
+const mongoose = require("mongoose")
+const db = mongoose.connection
+mongoose.connect(mongoURI)
+db.once("open", () => {
+    console.log("Connected to MongoDB")
+})
+db.error("error", (err) => {
+    console.log(`MongoDB connected ${mongoURI}`)
+})
+
+
 
 //MiddleWare
 app.use(express.static("public"))
