@@ -1,6 +1,22 @@
 <%- include("./partials/header.ejs") %>
 <%- include("./partials/navigation.ejs") %>
 
-    <%=plan%>
+    <div>
+        <label>
+            Date: 
+            <input type="text" value="<%=plan.date%>" readonly>
+        </label>
+        <label>
+            Amount: 
+            <input type="text" value="<%=plan.amount%>" readonly>
+        </label>
+        <label>
+            Name: 
+            <input type="text" value="<%=plan.name%>" readonly>
+        </label>
+        <textarea name="notes" readonly>
+            <%=plan.notes%>
+        </textarea>
+    </div>
 
 <%- include("./partials/footer.ejs") %>
