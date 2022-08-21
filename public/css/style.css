@@ -2,3 +2,26 @@ header {
     width: 100%;
     text-align: center;
 }
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#button-outer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    left: 100px;
+}
+
+#button-inner {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    top: 5px;
+    left: 25px;
+}
