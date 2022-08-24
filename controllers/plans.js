@@ -10,11 +10,13 @@ router.route("/")
 //Index
 .get((req,res) => {
     Plan.find({},(err,plans) => {
+        let runningTotal = 0;
         plans.forEach(element => {
             // console.log(element.date.toString().slice(4,15))
             element.date = element.date.toString().slice(4,15)
+            runningTotal += element.amount
         });
-        res.render("index.ejs", {plans})
+        res.render("index.ejs", {plans,runningTotal})
     })
 })
 .post((req,res) => {

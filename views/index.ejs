@@ -4,10 +4,10 @@
     <% for (plan of plans) { %>
         <div class="entry">
             <li><%=plan.date.toString().slice(4,15)%> </li>
-            <li><a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
+            <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
             <li><%=plan.expense%></li>
-            <li><%=plan.expense%></li>     
-            <li><%=plan.expense%></li>                 
+            <li>$<%=runningTotal%></li>     
+            <li>$<%=plan.expense%></li>                 
         </div>
     <% } %>
 </div>
