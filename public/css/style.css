@@ -31,6 +31,7 @@ nav {
     height: 1000px;
     margin: auto;
     border: black 1px solid;
+    overflow-y: scroll;
 }
 
 .main-top {
@@ -64,4 +65,26 @@ nav {
     border: black 1px solid;
     text-align: center;
     font-size: 40px;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+}
+
+.index .entry {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    font-size: 30px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.entry li {
+    border: 2px black solid;
+    width: 200px;
 }

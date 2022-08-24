@@ -10,6 +10,10 @@ router.route("/")
 //Index
 .get((req,res) => {
     Plan.find({},(err,plans) => {
+        plans.forEach(element => {
+            // console.log(element.date.toString().slice(4,15))
+            element.date = element.date.toString().slice(4,15)
+        });
         res.render("index.ejs", {plans})
     })
 })
