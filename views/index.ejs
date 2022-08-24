@@ -1,13 +1,19 @@
 <%- include("./partials/header.ejs") %>
 <%- include("./partials/navigation.ejs") %>
 <div class="index">
-    <% for (plan of plans) { %>
+    <% let runningTotal = 0 %>
+    <% for (plan of plans) { 
+        if (plan.expense === true) {
+            runningTotal -= plan.amount
+        } else {
+            runningTotal += plan.amount
+        } %>
         <div class="entry">
             <li><%=plan.date.toString().slice(4,15)%> </li>
             <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
             <li><%=plan.expense%></li>
             <li>$<%=runningTotal%></li>     
-            <li>$<%=plan.expense%></li>                 
+            <li>$<%=target%></li>                 
         </div>
     <% } %>
 </div>
