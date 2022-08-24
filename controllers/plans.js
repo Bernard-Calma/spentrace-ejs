@@ -10,11 +10,11 @@ router.route("/")
 //Index
 .get((req,res) => {
     Plan.find({},(err,plans) => {
-        let total = 0;
-        let runningTotal = 0;
-        let totalIncome = 0;
-        let totalExpense = 0;
-        let target = 0;
+        let total = 0.00;
+        let runningTotal = 0.00;
+        let totalIncome = 0.00;
+        let totalExpense = 0.00;
+        let target = 0.00;
         plans.forEach(element => {
             target = 0;
             // console.log(element.date.toString().slice(4,15))
@@ -24,8 +24,8 @@ router.route("/")
             } else if (element.expense === false) {
                 totalIncome += element.amount
             } 
-            total += element.amount
-            if (runningTotal < 0) {
+            total = totalIncome - totalExpense
+            if (total < 0) {
                 target = Math.abs(total)
             } else {
                 target = 0;
