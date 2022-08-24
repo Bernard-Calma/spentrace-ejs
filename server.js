@@ -4,7 +4,7 @@ const planController = require("./controllers/plans.js")
 
 //Environment Variables
 require("dotenv").config()
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const mongoURI = process.env.MONGOURI
 
 // Import Database here
