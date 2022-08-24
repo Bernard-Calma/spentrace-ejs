@@ -13,10 +13,10 @@ const mongoose = require("mongoose")
 const db = mongoose.connection
 mongoose.connect(mongoURI)
 db.once("open", () => {
-    console.log("Connected to MongoDB")
+    console.log(`Connected to MongoDB ${db.host}:${db.port}`)
 })
 db.error("error", (err) => {
-    console.log(`MongoDB connected ${mongoURI}`)
+    console.log(`MongoDB connected ${db.host}:${db.port}`)
 })
 
 //MiddleWare
