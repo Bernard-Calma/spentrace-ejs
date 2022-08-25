@@ -47,6 +47,11 @@ router.route("/")
     })
 })
 
+.put((req,res) => {
+    console.log("Body: " + req.body)
+    res.redirect("/plan")
+})
+
 router.get("/new", (req,res) => {
     res.render("new.ejs")
 })

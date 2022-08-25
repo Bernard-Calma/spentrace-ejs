@@ -1,4 +1,5 @@
 const express = require("express");
+const methodOverride = require("method-override")
 const app = express();
 const planController = require("./controllers/plans.js")
 
@@ -22,6 +23,7 @@ db.error("error", (err) => {
 app.use(express.static("public"))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(methodOverride("_method"))
 
 //Controllers
 app.use("/plan",planController)

@@ -23,22 +23,29 @@
             <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
             <li>
                 <%=//plan.expense%>
-                <div class="button-expense">
-                    <div class="btnExpenseLeft" 
-                    <% if (!plan.expense) {%>
-                        style="background-color: green;"
-                    <%} else {%>
-                        style="background-color: black;"
-                    <%}%>
-                    ></div>
-                    <div class="btnExpenseRight"
-                    <% if (plan.expense) {%>
-                        style="background-color: red;"
-                    <%} else {%>
-                        style="background-color: black;"
-                    <%}%>
-                    ></div>
-                </div>
+                <form action="/plan?_method=PUT" method="POST">
+                        <!---- 
+                        https://stackoverflow.com/questions/2400482/how-do-i-make-a-div-button-submit-the-form-its-sitting-in
+                        making a div to submit form
+                        -->
+                    <div class="button-expense" onClick="javascript:this.parentNode.submit()" >
+                        <div class="btnExpenseLeft" 
+                        <% if (!plan.expense) {%>
+                            style="background-color: green;"
+                        <%} else {%>
+                            style="background-color: black;"
+                        <%}%>
+                        ></div>
+                        <div class="btnExpenseRight"
+                        <% if (plan.expense) {%>
+                            style="background-color: red;"
+                        <%} else {%>
+                            style="background-color: black;"
+                        <%}%>
+                        ></div>                
+                    </div>
+                </form>
+
             </li>
             <li>$<%=runningTotal%></li>     
             <li>$<%=target%></li>                 
