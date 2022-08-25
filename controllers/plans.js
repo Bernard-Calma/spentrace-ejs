@@ -36,6 +36,7 @@ router.route("/")
     })
 })
 .post((req,res) => {
+    req.body.expense = true;
     Plan.create(req.body, (err,plan) => {
         if (err) {
             console.log(`Error: ${err}`)
