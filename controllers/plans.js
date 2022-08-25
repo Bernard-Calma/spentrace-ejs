@@ -48,7 +48,21 @@ router.route("/")
 })
 
 .put((req,res) => {
-    console.log("Body: " + req.body)
+    console.log(req.body.expense)
+    if (req.body.expense === "true") {
+        Plan.findByIdAndUpdate(req.body._id, {
+            expense: false
+        },{new:true}, (err,newExpenseVal) => {
+            console.log("Updated: " + newExpenseVal)
+        })
+    } else {
+        // console.log("2nd If")
+        Plan.findByIdAndUpdate(req.body._id, {
+            expense: true
+        },{new:true}, (err,newExpenseVal) => {
+            console.log("Updated: " + newExpenseVal)
+        })
+    }
     res.redirect("/plan")
 })
 

@@ -24,6 +24,9 @@
             <li>
                 <%=//plan.expense%>
                 <form action="/plan?_method=PUT" method="POST">
+                    <!---- This inputs are hidden to send a req.body to server-->
+                    <input type="text" name="_id" id="" value = "<%=plan._id%>"hidden>
+                    <input type="text" name="expense" id="" value = "<%=plan.expense%>"hidden>
                         <!---- 
                         https://stackoverflow.com/questions/2400482/how-do-i-make-a-div-button-submit-the-form-its-sitting-in
                         making a div to submit form
