@@ -26,6 +26,10 @@ app.use(express.urlencoded({extended:true}))
 //Controllers
 app.use("/plan",planController)
 
+app.get('/', (req,res) => {
+    res.render("login.ejs")
+})
+
 app.listen(PORT,()=>{
     console.log(`Server is running at PORT: ${PORT}`)
 })
