@@ -21,7 +21,17 @@
         <div class="entry">
             <li><%=plan.date.toString().slice(4,15)%> </li>
             <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
-            <li><%=plan.expense%></li>
+            <li>
+                <%=//plan.expense%>
+                <div class="button-expense">
+                    <div class="btnExpenseLeft">
+                        
+                    </div>
+                    <div class="btnExpenseRight">
+                        
+                     </div>
+                </div>
+            </li>
             <li>$<%=runningTotal%></li>     
             <li>$<%=target%></li>                 
         </div>
