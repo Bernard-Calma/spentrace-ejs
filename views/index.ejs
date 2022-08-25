@@ -1,5 +1,15 @@
 <%- include("./partials/header.ejs") %>
 <%- include("./partials/navigation.ejs") %>
+<div class = "main">
+    <div class = "main-top">
+        <ul class="top-headings">
+            <li>Date</li>
+            <li>Amount</li>
+            <li>Expense/<br/>Income</li>
+            <li>Running Total</li>
+            <li>Target</li>
+        </ul>
+    </div>
 <div class="index">
     <% let runningTotal = 0 %>
     <% for (plan of plans) { 
