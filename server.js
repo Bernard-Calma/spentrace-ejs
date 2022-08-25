@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended:true}))
 app.use("/plan",planController)
 
 app.get('/', (req,res) => {
-    res.redirect("/plan")
+    res.render("login.ejs")
 })
 
 app.listen(PORT,()=>{

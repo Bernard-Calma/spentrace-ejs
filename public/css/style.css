@@ -11,11 +11,11 @@ footer {
 nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 
-#button-outer {
+#button-outer, #button-back {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -24,11 +24,19 @@ nav {
 }
 
 #button-inner {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     font-size: 50px;
     position: relative;
     top: 5px;
-    left: 25px;
+}
+
+.button-clicked {
+    color: white;
+    text-decoration: none;
 }
 
 .main {
