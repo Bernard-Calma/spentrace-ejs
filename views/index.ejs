@@ -24,12 +24,20 @@
             <li>
                 <%=//plan.expense%>
                 <div class="button-expense">
-                    <div class="btnExpenseLeft">
-                        
-                    </div>
-                    <div class="btnExpenseRight">
-                        
-                     </div>
+                    <div class="btnExpenseLeft" 
+                    <% if (!plan.expense) {%>
+                        style="background-color: green;"
+                    <%} else {%>
+                        style="background-color: black;"
+                    <%}%>
+                    ></div>
+                    <div class="btnExpenseRight"
+                    <% if (plan.expense) {%>
+                        style="background-color: red;"
+                    <%} else {%>
+                        style="background-color: black;"
+                    <%}%>
+                    ></div>
                 </div>
             </li>
             <li>$<%=runningTotal%></li>     
@@ -38,4 +46,5 @@
     <% } %>
 </div>
 <script src="js/navButton.js"></script>
+<script src="js/expenseButton.js"></script>
 <%- include("./partials/footer.ejs") %>
