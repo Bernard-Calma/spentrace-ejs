@@ -11,30 +11,39 @@ router.route("/")
 .get((req,res) => {
     
     Plan.find({},(err,plans) => {
-        // console.log(plans[0].date.toString())
-        // console.log(parseInt(plans[0].date.toString().slice(8,10)) + 1)
-        // console.log(plans)
-        let total = 0.00;
-        let runningTotal = 0.00;
-        let totalIncome = 0.00;
-        let totalExpense = 0.00;
-        let target = 0.00;
-        plans.forEach(element => {
-            target = 0;
-            if (element.expense === true) {
-                totalExpense += element.amount
-            } else if (element.expense === false) {
-                totalIncome += element.amount
-            } 
-            total = totalIncome - totalExpense
-            if (total < 0) {
-                target = Math.abs(total)
-            } else {
+        if (err) {
+            console.log(err)
+        } else {
+                    // console.log(plans[0].date.toString())
+            // console.log(parseInt(plans[0].date.toString().slice(8,10)) + 1)
+            // console.log(plans)
+            let total = 0.00;
+            let runningTotal = 0.00;
+            let totalIncome = 0.00;
+            let totalExpense = 0.00;
+            let target = 0.00;
+            plans.forEach(element => {
                 target = 0;
-            }
-            
-        });
-        res.render("index.ejs", {plans,total,totalExpense,target})
+                if (element.expense === true) {
+                    totalExpense += element.amount
+                } else if (element.expense === false) {
+                    totalIncome += element.amount
+                } 
+                total = totalIncome - totalExpense
+                if (total < 0) {
+                    target = Math.abs(total)
+                } else {
+                    target = 0;
+                }
+                
+            });
+            res.render("index.ejs", {
+                plans,
+                total,
+                totalExpense,
+                target
+            })
+        }
     })
 })
 .post((req,res) => {
