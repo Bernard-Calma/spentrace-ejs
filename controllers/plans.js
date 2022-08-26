@@ -10,6 +10,7 @@ router.route("/")
 //Index
 .get((req,res) => {
     Plan.find({},(err,plans) => {
+        // console.log(plans)
         let total = 0.00;
         let runningTotal = 0.00;
         let totalIncome = 0.00;
@@ -53,14 +54,14 @@ router.route("/")
         Plan.findByIdAndUpdate(req.body._id, {
             expense: false
         },{new:true}, (err,newExpenseVal) => {
-            console.log("Updated: " + newExpenseVal)
+            // console.log("Updated: " + newExpenseVal)
         })
     } else {
         // console.log("2nd If")
         Plan.findByIdAndUpdate(req.body._id, {
             expense: true
         },{new:true}, (err,newExpenseVal) => {
-            console.log("Updated: " + newExpenseVal)
+            // console.log("Updated: " + newExpenseVal)
         })
     }
     res.redirect("/plan")
