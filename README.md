@@ -67,3 +67,15 @@ I myself have a hard time managing my money and I usually spend time just to get
 
 ### Additional Stretch Goals / Future Implementation
 - Add Calendar View
+
+### Installation Instructions
+<p>No installation needed, click on the link below and you will be able to use the app in your browswer.</p>
+<a href="https://spentrance.herokuapp.com/">Spentrace</a>
+
+### Unsolved Prolems
+
+
+### Forthcoming Features
+<p>Monthly View</p>
+<p>Calendar View</p>
+
