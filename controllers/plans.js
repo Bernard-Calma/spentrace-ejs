@@ -9,7 +9,10 @@ const Plan = require("../models/plans")
 router.route("/")
 //Index
 .get((req,res) => {
+    
     Plan.find({},(err,plans) => {
+        // console.log(plans[0].date.toString())
+        // console.log(parseInt(plans[0].date.toString().slice(8,10)) + 1)
         // console.log(plans)
         let total = 0.00;
         let runningTotal = 0.00;
@@ -18,8 +21,6 @@ router.route("/")
         let target = 0.00;
         plans.forEach(element => {
             target = 0;
-            // console.log(element.date.toString().slice(4,15))
-            element.date = element.date.toString().slice(4,15)
             if (element.expense === true) {
                 totalExpense += element.amount
             } else if (element.expense === false) {
@@ -90,9 +91,8 @@ router.route("/:id/edit")
 })
 
 .put((req,res) => {
-    console.log(req.body)
     Plan.findByIdAndUpdate(req.params.id,req.body,{new:true}, (err,editedPlan) => {
-        console.log(editedPlan)
+        // console.log(editedPlan)
     })
     res.redirect("/plan")
 })

@@ -3,7 +3,11 @@
 <div class="main-show">
     <div class="show">
         <label>
-            Date: <%=plan.date.toString().slice(4,15)%>
+            Date: <%=
+                plan.date.toString().slice(4,8) +
+                (parseInt(plan.date.toString().slice(8,10)) + 1) +
+                plan.date.toString().slice(10,15)
+                %>
         </label>
         <label>
             Amount: $<%=plan.amount%>

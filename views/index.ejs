@@ -19,7 +19,11 @@
             runningTotal += plan.amount
         } %>
         <div class="entry">
-            <li><%=plan.date.toString().slice(4,15)%> </li>
+            <li><%=
+                plan.date.toString().slice(4,8) +
+                (parseInt(plan.date.toString().slice(8,10)) + 1) +
+                plan.date.toString().slice(10,15)
+                %></li>
             <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
             <li>
                 <%=//plan.expense%>
