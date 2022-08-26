@@ -80,4 +80,21 @@ router.route("/:id")
     })
 })
 
+router.route("/:id/edit")
+.get((req,res) => {
+    Plan.findById(req.params.id,(err,planFound) => {
+        res.render("edit.ejs", {
+            plan: planFound
+        })
+    })
+})
+
+.put((req,res) => {
+    console.log(req.body)
+    Plan.findByIdAndUpdate(req.params.id,req.body,{new:true}, (err,editedPlan) => {
+        console.log(editedPlan)
+    })
+    res.redirect("/plan")
+})
+
 module.exports = router

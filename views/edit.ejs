@@ -1,0 +1,24 @@
+<%- include("./partials/header.ejs") %>
+<%- include("./partials/navigation.ejs") %>
+<div class="main-new">
+    <form action="/plan/<%=plan._id%>/edit?_method=PUT" method="POST">
+        <!--Input for expense to be send to body-->
+        <input type="text" name="expense" value="<%=plan.expense%>" hidden>
+        <label>
+            Date: 
+            <input type="date" name="date" id="date" required value="<%=plan.date.toString().slice(4,15)%>"/>
+        </label>
+        <label>
+            Amount:
+            <input type="number" name="amount" id="amount" value="<%=plan.amount%>">
+        </label>
+        <label>
+            Name: 
+            <input type="text" name="name" id="name" value="<%=plan.name%>">
+        </label>
+        <label for="notes">Notes:</label>
+        <textarea name="notes"><%=plan.notes%></textarea>
+        <input type="submit" value="OK">
+    </form>
+    <script src="/js/navButton.js"></script>
+<%- include("./partials/footer.ejs") %>
