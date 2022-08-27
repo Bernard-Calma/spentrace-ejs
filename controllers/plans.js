@@ -44,7 +44,7 @@ router.route("/")
                 target
             })
         }
-    })
+    }).sort({date: "asc"})
 })
 // CREATE
 .post((req,res) => {
