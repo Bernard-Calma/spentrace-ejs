@@ -203,3 +203,26 @@ input[type="submit"]{
     padding: 0;
     background-color: black;
 }
+
+/* LOGIN */
+.divLogin {
+    align-content: center;
+    margin: 0 auto;
+}
+
+.divLogin form {
+    border: 5px groove;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: larger;
+    color: #B0B7C4;
+}
+
+.divLogin form input[type="text"], input[type="password"]  {
+    width: 150px;
+    height: 30px;
+    margin: 10px auto;
+}
