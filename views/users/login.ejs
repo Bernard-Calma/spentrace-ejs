@@ -1,4 +1,4 @@
-<%- include("./partials/header.ejs") %>
+<%- include("../partials/header.ejs") %>
 
 <div class="divLogin">
     <form action="/plan" method="GET">
@@ -8,7 +8,11 @@
         <label>
             Password: <input type="password" name="" id="">
         </label>
-        <input type="submit" value="LOGIN">
+        <div class="btnsLogin">
+            <a href="/users/register"><input type="button" value="Register"></a>
+            <input type="submit" value="LOGIN">
+        </div>
+
     </form>
 </div>
 <ul>
@@ -17,4 +21,4 @@
     <li>Style</li>
 </ul>
 
-<%- include("./partials/footer.ejs") %>
+<%- include("../partials/footer.ejs") %>

@@ -32,7 +32,7 @@ app.use("/users",userController)
 
 
 app.get('/', (req,res) => {
-    res.render("login.ejs")
+    res.redirect("/users")
 })
 
 app.listen(PORT,()=>{

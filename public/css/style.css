@@ -174,7 +174,7 @@ textarea {
     margin:0 auto;
 }
 
-input[type="submit"]{
+input[type="submit"], input[type="button"]{
     width: 70px;
     height: 70px;
     border: solid ridge;
@@ -228,4 +228,10 @@ input[type="submit"]{
     width: 150px;
     height: 30px;
     margin: 10px auto;
+}
+
+.btnsLogin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require("../models/users.js")
 
 router.get('/', (req, res) => {
-    res.send("user controller works")
+    res.render("./users/login.ejs")
 })
 
 module.exports = router
