@@ -14,9 +14,6 @@ if (document.URL.includes("/plan/") && !document.URL.includes("/plan/new")) {
 
         if (!buttonClicked) {
             nav.innerHTML = `
-                <div style="width: 60%;">
-                
-                </div>
                 <div id="button-outer">
                     <div id="button-inner">
                         <a class="button-clicked" href="${document.URL}/edit">✎</a>
@@ -35,9 +32,6 @@ if (document.URL.includes("/plan/") && !document.URL.includes("/plan/new")) {
             buttonClicked = true
         } else {
             nav.innerHTML = `
-                <div style="width: 60%;">
-                
-                </div>
                 <div id="button-outer">
                     <div id="button-inner">
                         =
@@ -58,9 +52,6 @@ if (document.URL.includes("/plan/") && !document.URL.includes("/plan/new")) {
         // content.appendChild(newLine)
         if (!buttonClicked) {
             nav.innerHTML = `
-                <div style="width: 60%;">
-                
-                </div>
                 <div id="button-outer">
                     <div id="button-inner">
                         <a class="button-clicked" href="/plan/new">+</a>
@@ -79,9 +70,6 @@ if (document.URL.includes("/plan/") && !document.URL.includes("/plan/new")) {
             buttonClicked = true
         } else {
             nav.innerHTML = `
-                <div style="width: 60%;">
-                
-                </div>
                 <div id="button-outer">
                     <div id="button-inner">
                         =
