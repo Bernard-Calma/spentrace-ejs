@@ -141,9 +141,22 @@ textarea {
     
 }
 
-.show label, textarea {
+.show label, textarea, form {
     margin: auto 20px;
     padding: 5px;
+}
+
+.show form {
+    text-align: center;
+    margin:0 auto;
+}
+
+input[type="submit"]{
+    width: 70px;
+    height: 70px;
+    border: solid ridge;
+    border-radius: 50%;
+    background-color: azure;
 }
 
 #lblNotes {

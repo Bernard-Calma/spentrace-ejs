@@ -2,8 +2,8 @@ const button = document.querySelector("#button-outer")
 const nav = document.querySelector("nav")
 let buttonBack = document.querySelector("#button-back")
 let buttonClicked = false;
-console.log(document.URL.includes("/plan/"))
-console.log(!document.URL.includes("/plan/new"))
+// console.log(document.URL.includes("/plan/"))
+// console.log(!document.URL.includes("/plan/new"))
 //if url doesn't show index and add route
 if (document.URL.includes("/plan/") && !document.URL.includes("/plan/new")) {
     button.addEventListener("click", ()=>{
