@@ -2,6 +2,7 @@ const express = require("express");
 const methodOverride = require("method-override")
 const app = express();
 const planController = require("./controllers/plans.js")
+const userController = require("./controllers/users.js")
 
 //Environment Variables
 require("dotenv").config()
@@ -27,6 +28,8 @@ app.use(methodOverride("_method"))
 
 //Controllers
 app.use("/plan",planController)
+app.use("/users",userController)
+
 
 app.get('/', (req,res) => {
     res.render("login.ejs")
