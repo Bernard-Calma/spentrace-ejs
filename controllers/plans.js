@@ -46,6 +46,7 @@ router.route("/")
         }
     })
 })
+// CREATE
 .post((req,res) => {
     req.body.expense = true;
     Plan.create(req.body, (err,plan) => {
@@ -57,7 +58,7 @@ router.route("/")
         }
     })
 })
-
+// UPDATE
 .put((req,res) => {
     console.log(req.body.expense)
     if (req.body.expense === "true") {
@@ -76,11 +77,11 @@ router.route("/")
     }
     res.redirect("/plan")
 })
-
+// CREATE
 router.get("/new", (req,res) => {
     res.render("new.ejs")
 })
-
+// SHOW
 router.route("/:id")
 .get((req,res) => {
     Plan.findById(req.params.id,(err,planFound) => {
@@ -89,7 +90,14 @@ router.route("/:id")
         })
     })
 })
+// DELETE
+.delete((req, res) => {
+    Plan.findByIdAndDelete(req.params.id, () => {
+        res.redirect("/plan")
+    })
+})
 
+// EDIT
 router.route("/:id/edit")
 .get((req,res) => {
     Plan.findById(req.params.id,(err,planFound) => {
@@ -98,12 +106,13 @@ router.route("/:id/edit")
         })
     })
 })
-
+// UPDATE
 .put((req,res) => {
     Plan.findByIdAndUpdate(req.params.id,req.body,{new:true}, (err,editedPlan) => {
         // console.log(editedPlan)
     })
     res.redirect("/plan")
 })
+
 
 module.exports = router
