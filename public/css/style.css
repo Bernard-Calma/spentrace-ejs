@@ -8,6 +8,7 @@ header {
     font-size: larger;
     color: #B0B7C4;
     border: 5px groove;
+    background-image: linear-gradient( #414449, #111827, black);
 }
 
 footer {
@@ -53,12 +54,13 @@ a {
     text-decoration: none;
 }
 
+/* index */
 .main {
     width: 1000px;
     height: 1000px;
     margin: auto;
     border: 4px ridge;
-    background-color: #444C5B;
+    background-image: linear-gradient( #414449, #262B33, #262B33, #262B33, black);
     color: #B0B7C4;
     overflow-y: scroll;
 }
@@ -126,7 +128,7 @@ a {
 
 .main-new form{
     border: 5px ridge;
-    background-color: #444C5B;
+    background-image: linear-gradient( #414449, #111827, black);
     color: #B0B7C4;
     width: 50%;
     font-size: 40px;
@@ -150,7 +152,7 @@ textarea {
 
 .show {
     border: 5px ridge;
-    background-color: #444C5B;
+    background-image: linear-gradient( #414449, #111827, black);
     color: #B0B7C4;
     width: 50%;
     font-size: 40px;
@@ -178,6 +180,7 @@ input[type="submit"]{
     border: solid ridge;
     border-radius: 50%;
     background-color: azure;
+
 }
 
 #lblNotes {
