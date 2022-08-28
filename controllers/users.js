@@ -33,7 +33,13 @@ router.route("/login")
         loginMsg = "User doesn't exist!!!"
         res.redirect("/users/login")
     } else {
-        res.redirect("/plan")
+        if (userFound.password === req.body.password) {
+            res.redirect("/plan")
+        } else {
+            loginMsg = "Password is incorrect!!!"
+            res.redirect("/users/login")
+        }
+        
     }
    })
         
