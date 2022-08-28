@@ -1,0 +1,17 @@
+<%- include("../partials/header.ejs") %>
+
+<h1> REGISTER </h1>
+
+<div class="divLogin">
+    <form action="/users/register" method="POST">
+        <label>
+            Username: <input type="text" name="username" required/>
+        </label>
+        <label>
+            Password: <input type="password" name="password"/>
+        </label>
+        <input type="submit" value="✓" id="btnRegister">
+    </form>
+</div>
+
+<%- include("../partials/footer.ejs") %>

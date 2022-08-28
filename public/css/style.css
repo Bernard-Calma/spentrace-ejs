@@ -2,6 +2,11 @@ body {
     background-color: #414449;
 }
 
+h1 {
+    text-align: center;
+    color: #B0B7C4;
+}
+
 header {
     width: 100%;
     text-align: center;
@@ -234,4 +239,9 @@ input[type="submit"], input[type="button"]{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+#btnRegister {
+    font-size: 20px;
+    margin: 20px auto;
 }
