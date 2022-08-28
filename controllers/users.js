@@ -10,6 +10,8 @@ router.route("/register")
 })
 // Register Button
 .post((req, res) => {
+    const salt = bcrypt.genSaltSync(10)
+    req.body.password = bcrypt.hashSync(req.body.password, salt)
     User.create(req.body, (err) => {
         if (err) {
             res.send("error")
