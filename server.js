@@ -28,6 +28,17 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use("/plan",(req, res, next) => {
+    res.locals.currentUser = req.session.currentUser
+    if (req.session.currentUser) {
+        res.locals.authenticated = true
+        next()
+    } else {
+        let loginMsg = "You need to login"
+        res.render("./users/login.ejs", {loginMsg})  
+    }
+})
+
 //MiddleWare
 app.use(express.static("public"))
 app.use(express.json())
