@@ -24,6 +24,7 @@ let loginMsg = ""
 router.route("/login")
 .get((req, res) => {
     res.render("./users/login.ejs", {loginMsg})
+    loginMsg = ""
 })
 .post((req, res) => {
    User.findOne({username: req.body.username}, (err, userFound) => {
