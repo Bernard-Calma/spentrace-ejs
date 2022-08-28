@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session")
 const methodOverride = require("method-override")
 const app = express();
 const planController = require("./controllers/plans.js")
@@ -19,6 +20,13 @@ db.once("open", () => {
 db.error("error", (err) => {
     console.log(`MongoDB connected ${db.host}:${db.port}`)
 })
+//Sessions
+const SESSION_SECRET = process.env.SESSION_SECRET
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+
+}))
 
 //MiddleWare
 app.use(express.static("public"))
