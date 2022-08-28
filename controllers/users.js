@@ -20,15 +20,17 @@ router.route("/register")
 })
 
 // Login
+let loginMsg = ""
 router.route("/login")
 .get((req, res) => {
-    res.render("./users/login.ejs")
+    res.render("./users/login.ejs", {loginMsg})
 })
 .post((req, res) => {
    User.findOne({username: req.body.username}, (err, userFound) => {
     console.log(userFound)
     if (!userFound) {
-        res.send("User doesn't exist")
+        loginMsg = "User doesn't exist!!!"
+        res.redirect("/users/login")
     } else {
         res.redirect("/plan")
     }

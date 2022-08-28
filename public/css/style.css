@@ -10,7 +10,7 @@ h1 {
 header {
     width: 100%;
     text-align: center;
-    font-size: larger;
+    font-size: xx-large;
     color: #B0B7C4;
     border: 5px groove;
     background-image: linear-gradient( #414449, #111827, black);
@@ -244,4 +244,10 @@ input[type="submit"], input[type="button"]{
 #btnRegister {
     font-size: 20px;
     margin: 20px auto;
+}
+
+#pLoginMsg {
+    color: rgb(255, 86, 86);
+    font-size: x-large;
+    text-align: center;
 }
