@@ -25,7 +25,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET
 app.use(session({
     secret: SESSION_SECRET,
     resave: false,
-
+    saveUninitialized: false
 }))
 
 //MiddleWare
