@@ -31,20 +31,25 @@ router.route("/login")
 .post((req, res) => {
    User.findOne({username: req.body.username}, (err, userFound) => {
     // console.log(userFound)
-    if (!userFound) {
-        loginMsg = "User doesn't exist!!!"
+    if (req.body.username === "") {
+        loginMsg = "Enter a valid username."
         res.redirect("/users/login")
     } else {
-        //unhash password
-        if (!bcrypt.compareSync(req.body.password, userFound.password)) {
-            loginMsg = "Password is incorrect!!!"
-            res.redirect("/users/login")            
+        if (!userFound) {
+            loginMsg = "User doesn't exist."
+            res.redirect("/users/login")
         } else {
-            req.session.currentUser = userFound
-            res.redirect("/plan")
-            console.log(req.session)
+            //unhash password
+            if (!bcrypt.compareSync(req.body.password, userFound.password)) {
+                loginMsg = "Password is incorrect."   
+                res.redirect("/users/login")     
+            } else {
+                req.session.currentUser = userFound
+                res.redirect("/plan")
+                console.log(req.session)
+            }
+            
         }
-        
     }
    })
         

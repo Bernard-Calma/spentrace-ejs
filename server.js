@@ -51,7 +51,7 @@ app.use("/users",userController)
 
 
 app.get('/', (req,res) => {
-    res.render("./users/login.ejs")
+    res.render("./users/login.ejs", { loginMsg: ""})
 })
 
 app.listen(PORT,()=>{
