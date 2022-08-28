@@ -35,11 +35,13 @@ router.route("/login")
         loginMsg = "User doesn't exist!!!"
         res.redirect("/users/login")
     } else {
-        if (userFound.password === req.body.password) {
-            res.redirect("/plan")
-        } else {
+        //unhash password
+        if (!bcrypt.compareSync(req.body.password, userFound.password)) {
             loginMsg = "Password is incorrect!!!"
-            res.redirect("/users/login")
+            res.redirect("/users/login")            
+        } else {
+            res.redirect("/plan")
+
         }
         
     }
