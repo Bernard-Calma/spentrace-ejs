@@ -52,7 +52,7 @@ router.route("/")
         if (err) {
             console.log(`Error: ${err}`)
         } else {
-            console.log(plan)
+            // console.log(plan)
             res.redirect("/plan")
         }
     })
