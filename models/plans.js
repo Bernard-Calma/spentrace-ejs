@@ -10,7 +10,11 @@ const planSchema = new mongoose.Schema({
     },
     name: String,
     expense: Boolean,
-    notes: String
+    notes: String,
+    userId: {
+        type: String,
+        required: true
+    }
 })
 
 const Plan = mongoose.model("Plan", planSchema)
