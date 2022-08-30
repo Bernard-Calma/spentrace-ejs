@@ -2,6 +2,7 @@
 <%- include("./partials/navigation.ejs") %>
 <div class="main-new">
     <form action="/plan" method="POST">
+        <input type="text" name="userId" value="<%=userId%>" hidden/>
         <label>
             Date: 
             <input type="date" name="date" id="date"/>

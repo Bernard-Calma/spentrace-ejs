@@ -2,7 +2,6 @@ const express = require("express")
 const router = express.Router()
 const Plan = require("../models/plans")
 
-
 /// Middleware
 
 ///Routes
@@ -78,8 +77,9 @@ router.route("/")
     res.redirect("/plan")
 })
 // CREATE
+
 router.get("/new", (req,res) => {
-    res.render("new.ejs")
+    res.render("new.ejs",{userId: req.session.currentUser._id})
 })
 // SHOW
 router.route("/:id")

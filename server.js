@@ -30,6 +30,7 @@ app.use(session({
 
 app.use("/plan",(req, res, next) => {
     res.locals.currentUser = req.session.currentUser
+    
     if (req.session.currentUser) {
         res.locals.authenticated = true
         next()
