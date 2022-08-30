@@ -251,3 +251,47 @@ input[type="submit"], input[type="button"]{
     font-size: x-large;
     text-align: center;
 }
+
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 1024px){
+    h1 {
+        width: 100%;
+        font-size: xx-large;
+    }
+
+    .main  {
+        width: 100%;
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .main-top, .index, .entry {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-headings {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    
+    .top-headings li {
+        font-size: 100%;
+        text-align: center;
+    }
+
+    .entry {
+        align-items: center;
+    }
+
+    .entry li {
+        height: 100%;
+        font-size: 50%;
+        text-align: center;
+    }
+
+    
+}
