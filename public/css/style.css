@@ -293,5 +293,15 @@ input[type="submit"], input[type="button"]{
         text-align: center;
     }
 
-    
+    /* Show */
+    .main-show, .main-new, .main-new form, .show {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-new form label {
+        margin-left: 20px;
+    }
+
+
 }
