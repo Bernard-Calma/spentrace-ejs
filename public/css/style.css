@@ -303,5 +303,11 @@ input[type="submit"], input[type="button"]{
         margin-left: 20px;
     }
 
+    input[type="submit"] {
+        color: black
+    }
 
+    footer {
+        position: relative;
+    }
 }
