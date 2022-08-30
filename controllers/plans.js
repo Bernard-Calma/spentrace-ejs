@@ -8,8 +8,8 @@ const Plan = require("../models/plans")
 router.route("/")
 //Index
 .get((req,res) => {
-    
-    Plan.find({},(err,plans) => {
+    Plan.find({userId: req.session.currentUser._id},(err,plans) => {
+        // console.log(plans)
         if (err) {
             console.log(err)
         } else {
