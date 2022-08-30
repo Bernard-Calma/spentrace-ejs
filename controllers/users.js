@@ -46,7 +46,7 @@ router.route("/login")
             } else {
                 req.session.currentUser = userFound
                 res.redirect("/plan")
-                console.log(req.session)
+                // console.log(req.session)
             }
             
         }
@@ -57,5 +57,12 @@ router.route("/login")
     
 })
 
+//Sign Out
+router.route("/signout")
+.get((req, res) => {
+    req.session.destroy()
+    loginMsg = "You've been logout"
+    res.redirect("/users/login")
+})
 
 module.exports = router
