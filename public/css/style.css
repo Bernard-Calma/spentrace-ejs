@@ -308,6 +308,7 @@ input[type="submit"], input[type="button"]{
     }
 
     footer {
-        position: relative;
+        position: absolute;
+        bottom: 0;
     }
 }

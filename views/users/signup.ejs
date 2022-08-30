@@ -4,12 +4,9 @@
 
 <div class="divLogin">
     <form action="/users/register" method="POST">
-        <label>
-            Username: <input type="text" name="username" required/>
-        </label>
-        <label>
-            Password: <input type="password" name="password" required/>
-        </label>
+        <input type="text" name="username" placeholder="Username" required/>
+        <input type="password" name="password" placeholder="Password" required/>
+        <input type="password" name="passwordVerify" placeholder="Verify Password" required/>
         <input type="submit" value="✓" id="btnRegister">
     </form>
     <p id="pRegisterMsg"><%=registerMsg%></p>

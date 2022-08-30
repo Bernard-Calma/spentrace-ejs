@@ -8,23 +8,30 @@ let loginMsg = ""
 // Register
 router.route("/register")
 .get((req, res) => {
+    loginMsg = ""
     res.render("./users/signup.ejs",{registerMsg})
 })
 // Register Button
 .post((req, res) => {
-    const salt = bcrypt.genSaltSync(10)
-    req.body.username = req.body.username.toLowerCase()
-    console.log(req.body)
-    req.body.password = bcrypt.hashSync(req.body.password, salt)
-    User.create(req.body, (err) => {
-        if (err) {
-            // console.log(err)
-            registerMsg = "Username is already taken."
-            res.render("./users/signup.ejs",{registerMsg})
-        } else {
-            res.redirect("/users/login")
-        }
-    })
+    if (req.body.password != req.body.passwordVerify) {
+        registerMsg = "Password doesn't match."
+        res.render("./users/signup.ejs",{registerMsg})       
+    } else {
+        const salt = bcrypt.genSaltSync(10)
+        req.body.username = req.body.username.toLowerCase()
+        console.log(req.body)
+        req.body.password = bcrypt.hashSync(req.body.password, salt)
+        User.create(req.body, (err) => {
+            if (err) {
+                // console.log(err)
+                registerMsg = "Username is already taken."
+                res.render("./users/signup.ejs",{registerMsg})
+            } else {
+                res.redirect("/users/login")
+            }
+        })       
+    }
+
 })
 
 // Login
