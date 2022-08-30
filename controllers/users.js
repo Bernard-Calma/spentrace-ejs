@@ -13,6 +13,7 @@ router.route("/register")
 })
 // Register Button
 .post((req, res) => {
+    loginMsg = ""
     if (req.body.password != req.body.passwordVerify) {
         registerMsg = "Password doesn't match."
         res.render("./users/signup.ejs",{registerMsg})       
