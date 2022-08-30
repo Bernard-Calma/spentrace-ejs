@@ -2,19 +2,25 @@ const express = require("express")
 const router = express.Router()
 const User = require("../models/users.js")
 const bcrypt = require ("bcrypt")
+let registerMsg = ""
+let loginMsg = ""
 
 // Register
 router.route("/register")
 .get((req, res) => {
-    res.render("./users/signup.ejs")
+    res.render("./users/signup.ejs",{registerMsg})
 })
 // Register Button
 .post((req, res) => {
     const salt = bcrypt.genSaltSync(10)
+    req.body.username = req.body.username.toLowerCase()
+    console.log(req.body)
     req.body.password = bcrypt.hashSync(req.body.password, salt)
     User.create(req.body, (err) => {
         if (err) {
-            res.send("error")
+            // console.log(err)
+            registerMsg = "Username is already taken."
+            res.render("./users/signup.ejs",{registerMsg})
         } else {
             res.redirect("/users/login")
         }
@@ -22,14 +28,13 @@ router.route("/register")
 })
 
 // Login
-let loginMsg = ""
 router.route("/login")
 .get((req, res) => {
     res.render("./users/login.ejs", {loginMsg})
     loginMsg = ""
 })
 .post((req, res) => {
-   User.findOne({username: req.body.username}, (err, userFound) => {
+   User.findOne({username: req.body.username.toLowerCase()}, (err, userFound) => {
     // console.log(userFound)
     if (req.body.username === "") {
         loginMsg = "Enter a valid username."
