@@ -23,7 +23,10 @@ header {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
+    background-color: #B0B7C4;
+    width: 100%;
+    text-align: center;
     bottom: 0;
 }
 
@@ -259,6 +262,7 @@ input[type="submit"], input[type="button"]{
 }
 
 
+
 /* MOBILE VERSION */
 
 @media only screen and (max-width: 1024px){
@@ -314,7 +318,6 @@ input[type="submit"], input[type="button"]{
     }
 
     footer {
-        bottom: 0;
-        margin-top: auto;
+       position: absolute;
     }
 }
