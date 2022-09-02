@@ -4,8 +4,9 @@
     <div class="show">
         <label>
             Date: <%=
-                plan.date.toString().slice(4,8) +
-                (parseInt(plan.date.toString().slice(8,10)) + 1) +
+                plan.date.toString().slice(4,8)  +
+                // +1 for local host, heroku shows correct date
+                (parseInt(plan.date.toString().slice(8,10))) +
                 plan.date.toString().slice(10,15)
                 %>
         </label>
