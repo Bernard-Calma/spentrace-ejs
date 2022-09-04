@@ -22,8 +22,7 @@
             <li><%=
                 plan.date.toString().slice(4,8)  +
                 // +1 for local host, heroku shows correct date
-                (parseInt(plan.date.toString().slice(8,10))) +
-                plan.date.toString().slice(10,15)
+                (parseInt(plan.date.toString().slice(8,10)))
                 %></li>
             <li>$<a href="/plan/<%=plan._id%>"><%=plan.amount%></a></li>
             <li>
