@@ -74,13 +74,25 @@ router.route("/")
             // console.log("Updated: " + newExpenseVal)
         })
     }
-    res.redirect("/plan")
+    res.redirect("/plan/")
 })
 // CREATE
 
 router.get("/new", (req,res) => {
     res.render("new.ejs",{userId: req.session.currentUser._id})
 })
+
+//DELETE
+
+router.delete("/delete", (req, res) => {
+    console.log("entered")
+    Plan.deleteMany({userId: req.session.currentUser._id}, ()=>{
+        res.redirect("/plan");
+    })
+})
+
+
+
 // SHOW
 router.route("/:id")
 .get((req,res) => {
@@ -113,6 +125,7 @@ router.route("/:id/edit")
     })
     res.redirect("/plan")
 })
+
 
 
 module.exports = router

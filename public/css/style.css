@@ -318,6 +318,14 @@ input[type="submit"], input[type="button"]{
     }
 
     footer {
-       position: absolute;
+       position: fixed;
     }
+
+    #clear {
+        all: none !important;
+    }
+}
+
+#clear {
+    all: none !important;
 }
