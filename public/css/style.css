@@ -23,11 +23,14 @@ header {
 }
 
 footer {
-    position: absolute;
+    position:relative;
+    margin: auto;
+    margin-top: 50%;
     background-color: #B0B7C4;
     width: 100%;
     text-align: center;
     bottom: 0;
+    left: 0;
 }
 
 nav {
@@ -70,6 +73,8 @@ a {
 
 /* index */
 .main {
+    display: flex;
+    flex-direction: column;
     width: 1000px;
     height: 1000px;
     margin: auto;
@@ -317,15 +322,14 @@ input[type="submit"], input[type="button"]{
         color: #B0B7C4;
     }
 
-    footer {
-       position: fixed;
-    }
 
-    #clear {
-        all: none !important;
-    }
 }
 
+#frmDelete {
+    margin: 0;
+    width: 20px;
+    bottom: 0;
+}
 #clear {
-    all: none !important;
+    all: unset;
 }
