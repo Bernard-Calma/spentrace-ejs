@@ -239,6 +239,7 @@ input[type="submit"], input[type="button"]{
     margin: 20px auto;
     font-size: larger;
     color: #B0B7C4;
+    width: 100%;
 }
 
 .divLogin form input[type="text"], input[type="password"]  {
