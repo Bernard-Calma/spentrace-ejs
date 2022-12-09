@@ -70,7 +70,7 @@ I myself have a hard time managing my money and I usually spend time just to get
 
 ### Installation Instructions
 <p>No installation needed, click on the link below and you will be able to use the app in your browswer.</p>
-<a href="https://spentrance.herokuapp.com/">Spentrace</a>
+<a href="https://spentrace.herokuapp.com/">Spentrace</a>
 
 ### Unsolved Prolems
 
