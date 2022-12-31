@@ -31,21 +31,27 @@ footer {
     position: absolute;
     bottom: 0px;
     background-color: #B0B7C4;
-    height: 50px;
+    height: 100px;
     width: 100%;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 nav {
     width: 100%;
     display: flex;
     justify-content: start;
-
 }
 
 a {
     color: #B0B7C4;
     text-decoration: none;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    clip: rect(100px, 100px);
 }
 
 /* Menu button */
