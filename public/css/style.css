@@ -318,6 +318,20 @@ input[type="submit"], input[type="button"]{
         text-align: center;
     }
 
+    footer {
+        height: 5%;
+    }
+
+    footer > p {
+        font-size: small;
+        margin: 0;
+    }
+
+    footer > a > img {
+        margin-top: -5px;
+        scale: 50%;
+    }
+
     /* Show */
     .main-show, .main-new, .main-new form, .show {
         width: 100%;
