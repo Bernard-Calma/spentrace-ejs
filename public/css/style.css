@@ -6,6 +6,7 @@ body {
     background-color: #414449;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 h1 {
@@ -23,10 +24,11 @@ header {
 }
 
 footer {
-    position: sticky;
+    position: relative;
     margin: auto;
-    margin-top: 50%;
+    margin-top: 40px;
     background-color: #B0B7C4;
+    height: 50px;
     width: 100%;
     text-align: center;
 }
