@@ -1,6 +1,7 @@
 a {
     color: #B0B7C4;
     text-decoration: none;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -216,6 +217,7 @@ input[type="submit"], input[type="button"]{
 .btnsLogin {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -239,11 +241,20 @@ input[type="submit"], input[type="button"]{
 
 .loginButton {
     color: black;
-    font-size: 50%;
     text-align: center;
     font-family: "Open Sans", sans-serif;
     font-weight: bolder;
-    margin: 20px;
+    width: 50%;
+    margin: 10% auto;
+    font-size: large;
+}
+
+.registerLink {
+    color: #B0B7C4;
+}
+
+.registerLink:hover {
+    color: white;
 }
 
 #btnRegister {
@@ -305,6 +316,20 @@ input[type="submit"], input[type="button"]{
         font-size: xx-large;
     }
 
+    .entry {
+        align-items: center;
+    }
+
+    .entry li {
+        height: 100%;
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .loginButton {
+        font-size: 3vw;
+    }
+
     .main  {
         width: 98%;
         height: 100%;
@@ -325,16 +350,6 @@ input[type="submit"], input[type="button"]{
     
     .top-headings li {
         font-size: 100%;
-        text-align: center;
-    }
-
-    .entry {
-        align-items: center;
-    }
-
-    .entry li {
-        height: 100%;
-        font-size: 50%;
         text-align: center;
     }
 
