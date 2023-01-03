@@ -219,11 +219,6 @@ input[type="submit"], input[type="button"]{
     justify-content: space-between;
 }
 
-.divLogin {
-    align-content: center;
-    margin: 0 auto;
-}
-
 .divLogin form {
     border: 5px groove;
     display: flex;
@@ -291,6 +286,20 @@ input[type="submit"], input[type="button"]{
 /* MOBILE VERSION */
 
 @media only screen and (max-width: 1024px){
+    footer {
+        height: 5%;
+    }
+
+    footer > p {
+        font-size: small;
+        margin: 0;
+    }
+
+    footer > a > img {
+        margin-top: -5px;
+        scale: 50%;
+    }
+    
     h1 {
         width: 98%;
         font-size: xx-large;
@@ -329,21 +338,12 @@ input[type="submit"], input[type="button"]{
         text-align: center;
     }
 
-    footer {
-        height: 5%;
+    /* LOGIN */
+    .divLogin {
+        margin: 30% auto;
     }
 
-    footer > p {
-        font-size: small;
-        margin: 0;
-    }
-
-    footer > a > img {
-        margin-top: -5px;
-        scale: 50%;
-    }
-
-    /* Show */
+    /* SHOW PAGE */
     .main-show, .main-new, .main-new form, .show {
         width: 100%;
         margin: 0;
