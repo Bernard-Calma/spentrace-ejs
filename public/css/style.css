@@ -213,6 +213,12 @@ input[type="submit"], input[type="button"]{
 }
 
 /* LOGIN */
+.btnsLogin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .divLogin {
     align-content: center;
     margin: 0 auto;
@@ -236,10 +242,9 @@ input[type="submit"], input[type="button"]{
     margin: 10px auto;
 }
 
-.btnsLogin {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.loginButton {
+    color: black;
+    font-size: 50%;
 }
 
 #btnRegister {
@@ -342,10 +347,6 @@ input[type="submit"], input[type="button"]{
 
     .main-new form label {
         margin-left: 20px;
-    }
-
-    input[type="submit"] {
-        color: #B0B7C4;
     }
 
 
