@@ -20,7 +20,7 @@ footer {
     position: relative;
     bottom: 0px;
     background-color: #B0B7C4;
-    height: 100px;
+    height: 10%;
     width: 100%;
     text-align: center;
     margin: auto 0 0;
@@ -51,6 +51,11 @@ nav {
     width: 100%;
     display: flex;
     justify-content: start;
+}
+
+/* FOOTER */
+.githubIcon {
+    width: 50px;
 }
 
 /* INDEX */
@@ -301,16 +306,15 @@ input[type="submit"], input[type="button"]{
 
 @media only screen and (max-width: 1024px){
     footer {
-        height: 5%;
+        height: 10%;
     }
 
     footer > p {
         font-size: small;
-        margin: 0;
+        margin: 10px auto 0;
     }
 
     footer > a > img {
-        margin-top: -5px;
         scale: 50%;
     }
     
