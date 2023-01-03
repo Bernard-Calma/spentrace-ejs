@@ -1,16 +1,25 @@
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+a {
+    color: #B0B7C4;
+    text-decoration: none;
 }
 
-html, body {
-    height: 100%;
-}
 body {
+    height: 100%;
     background-color: #414449;
     display: flex;
     flex-direction: column;
     margin: 0;
     align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: #B0B7C4;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 h1 {
@@ -27,14 +36,10 @@ header {
     background-image: linear-gradient( #414449, #111827, black);
 }
 
-footer {
-    position: absolute;
-    bottom: 0px;
-    background-color: #B0B7C4;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 10px;
+img {
+    height: 50px;
+    width: 50px;
+    clip: rect(100px, 100px);
 }
 
 nav {
@@ -43,44 +48,7 @@ nav {
     justify-content: start;
 }
 
-a {
-    color: #B0B7C4;
-    text-decoration: none;
-}
-
-img {
-    height: 50px;
-    width: 50px;
-    clip: rect(100px, 100px);
-}
-
-/* Menu button */
-#button-outer, #button-back {
-    width: 80px;
-    height: 80px;
-    border: 5px double gray;
-    border-radius: 50%;
-    background: #414449;
-    left: 100px;
-}
-
-#button-inner {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-size: 50px;
-    position: relative;
-    top: 5px;
-}
-
-.button-clicked {
-    color: white;
-    text-decoration: none;
-}
-
-/* index */
+/* INDEX */
 .main {
     display: flex;
     flex-direction: column;
@@ -210,10 +178,6 @@ input[type="submit"], input[type="button"]{
 
 }
 
-#lblNotes {
-    text-align: start;
-}
-
 .button-expense {
     margin: auto;
     margin-top: 7px;
@@ -232,6 +196,20 @@ input[type="submit"], input[type="button"]{
     margin: 0;
     padding: 0;
     background-color: black;
+}
+
+#clear {
+    all: unset;
+}
+
+#frmDelete {
+    margin: 0;
+    width: 20px;
+    bottom: 0;
+}
+
+#lblNotes {
+    text-align: start;
 }
 
 /* LOGIN */
@@ -275,7 +253,31 @@ input[type="submit"], input[type="button"]{
     text-align: center;
 }
 
+/* MENU BUTTON */
+#button-outer, #button-back {
+    width: 80px;
+    height: 80px;
+    border: 5px double gray;
+    border-radius: 50%;
+    background: #414449;
+    left: 100px;
+}
 
+#button-inner {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    top: 5px;
+}
+
+.button-clicked {
+    color: white;
+    text-decoration: none;
+}
 
 /* MOBILE VERSION */
 
@@ -349,11 +351,3 @@ input[type="submit"], input[type="button"]{
 
 }
 
-#frmDelete {
-    margin: 0;
-    width: 20px;
-    bottom: 0;
-}
-#clear {
-    all: unset;
-}
