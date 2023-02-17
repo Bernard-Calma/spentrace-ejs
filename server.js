@@ -7,7 +7,7 @@ const userController = require("./controllers/users.js")
 
 //Environment Variables
 require("dotenv").config()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const mongoURI = process.env.MONGOURI
 // Import Database here
 const Plan = require("./models/plans.js")
