@@ -224,6 +224,10 @@ input[type="submit"], input[type="button"]{
 }
 
 /* LOGIN */
+.divLogin {
+    width: 300px;
+}
+
 .btnsLogin {
     width: 100%;
     display: flex;
@@ -375,6 +379,14 @@ input[type="submit"], input[type="button"]{
 
     .main-new form label {
         margin-left: 20px;
+    }
+
+    #btnDelete {
+        margin: 5px auto 0;
+        background-color: gray;
+        border: gray;
+        border-radius: 10px;
+        padding: 5px;
     }
 
 

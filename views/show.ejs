@@ -19,7 +19,7 @@
         <label for="notes">Notes: </label>
         <textarea name="notes" id="lblNotes" disabled readonly><%=plan.notes%></textarea>
         <form action="/plan/<%=plan._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE">
+            <button id="btnDelete"><img   src="/images/trashcan.png" alt="delete"></button>
         </form>
     </div>
     <script src="/js/navButton.js"></script>
