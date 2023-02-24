@@ -383,12 +383,16 @@ input[type="submit"], input[type="button"]{
 
     #btnDelete {
         margin: 5px auto 0;
-        background-color: gray;
-        border: gray;
+        background-color: azure;
+        border: azure;
         border-radius: 10px;
         padding: 5px;
     }
 
+    /* NEW PAGE */
+    .btnAdd {
+        color: black
+    }
 
 }
 
