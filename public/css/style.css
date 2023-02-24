@@ -394,5 +394,9 @@ input[type="submit"], input[type="button"]{
         color: black
     }
 
+    /* EDIT PAGE */
+    .btnEdit {
+        color: black
+    }
 }
 

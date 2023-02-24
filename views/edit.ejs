@@ -3,10 +3,11 @@
 <div class="main-new">
     <form action="/plan/<%=plan._id%>/edit?_method=PUT" method="POST">
         <!--Input for expense to be send to body-->
+        <!-- <% console.log(new Date(plan.date).toISOString().slice(0,10))%> -->
         <input type="text" name="expense" value="<%=plan.expense%>" hidden>
         <label>
             Date: 
-            <input type="date" name="date" id="date" required/>
+            <input type="date" name="date" id="date" value="<%=new Date(plan.date).toISOString().slice(0,10)%>" required />
         </label>
         <label>
             Amount:
@@ -18,7 +19,7 @@
         </label>
         <label for="notes">Notes:</label>
         <textarea name="notes"><%=plan.notes%></textarea>
-        <input type="submit" value="OK">
+        <input class="btnEdit" type="submit" value="OK">
     </form>
     <script src="/js/navButton.js"></script>
 <%- include("./partials/footer.ejs") %>
