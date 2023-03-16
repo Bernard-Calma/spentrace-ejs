@@ -15,10 +15,13 @@ const mongoose = require("mongoose")
 const db = mongoose.connection
 mongoose.connect(mongoURI)
 db.once("open", () => {
-    console.log(`Connected to MongoDB ${db.host}:${db.port}`)
+    console.log(`Connected to MongoDB Database`)
 })
 db.error("error", (err) => {
-    console.log(`MongoDB connected ${db.host}:${db.port}`)
+    console.log({
+        error: err.message,
+        message: "Error connecting to database."
+    })
 })
 //Sessions
 const SESSION_SECRET = process.env.SESSION_SECRET
@@ -30,7 +33,7 @@ app.use(session({
 
 app.use("/plan",(req, res, next) => {
     res.locals.currentUser = req.session.currentUser
-    
+    console.log("Session", req.session)
     if (req.session.currentUser) {
         res.locals.authenticated = true
         next()

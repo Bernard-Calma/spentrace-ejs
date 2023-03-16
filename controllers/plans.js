@@ -13,7 +13,7 @@ router.route("/")
         if (err) {
             console.log(err)
         } else {
-                    // console.log(plans[0].date.toString())
+            // console.log(plans[0].date.toString())
             // console.log(parseInt(plans[0].date.toString().slice(8,10)) + 1)
             // console.log(plans)
             let total = 0.00;
